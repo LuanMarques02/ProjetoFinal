@@ -28,9 +28,9 @@ class _MyHomePageState extends State<MyHomePage> {
   // List of widgets to display in each drawer option
   static List<Widget> _widgetOptions = <Widget>[
     ProfilePage(),
-    ProductsPage(),
+    CustoPage(),
     CartPage(),
-    HelpPage(),
+    LucroPage(),
   ];
 
   void _onItemTapped(int index) {
@@ -129,36 +129,36 @@ class ProfilePage extends StatelessWidget {
   }
 }
 
-class ProductsPage extends StatelessWidget {
+class CustoPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
         Text(
-          'Lista de Produtos',
+          'Lista de Custos',
           style: TextStyle(fontSize: 24),
         ),
         ElevatedButton(
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => AddProductPage()),
+              MaterialPageRoute(builder: (context) => AddCustoPage()),
             );
           },
-          child: Text('Cadastrar Produto'),
+          child: Text('Cadastrar Custo'),
         ),
       ],
     );
   }
 }
 
-class AddProductPage extends StatelessWidget {
+class AddCustoPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Cadastrar Produto'),
+        title: Text('Cadastrar Custo'),
         backgroundColor: Colors.green, // Define a cor do AppBar como verde
       ),
       body: Padding(
@@ -166,7 +166,7 @@ class AddProductPage extends StatelessWidget {
         child: Column(
           children: <Widget>[
             TextField(
-              decoration: InputDecoration(labelText: 'Nome do Produto'),
+              decoration: InputDecoration(labelText: 'Nome Custo'),
             ),
             TextField(
               decoration: InputDecoration(labelText: 'Preço'),
@@ -179,7 +179,7 @@ class AddProductPage extends StatelessWidget {
               onPressed: () {
                 // Função para salvar produto
               },
-              child: Text('Salvar Produto'),
+              child: Text('Salvar Custo'),
             ),
           ],
         ),
@@ -200,12 +200,12 @@ class CartPage extends StatelessWidget {
   }
 }
 
-class HelpPage extends StatelessWidget {
+class LucroPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
       child: Text(
-        'Ajuda',
+        'Lucro da safra',
         style: TextStyle(fontSize: 24),
       ),
     );
