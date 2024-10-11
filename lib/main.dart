@@ -8,7 +8,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Cadastro de Produtos',
+      title: 'Controle Safra',
       theme: ThemeData(
         primarySwatch: Colors.green, // Define o tema verde
       ),
@@ -44,7 +44,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Cadastro de Produtos'),
+        title: Text('Controle Safra'),
         backgroundColor: Colors.green, // Define a cor do AppBar como verde
       ),
       body: Center(
@@ -72,18 +72,18 @@ class _MyHomePageState extends State<MyHomePage> {
               onTap: () => _onItemTapped(0), // Perfil primeiro
             ),
             ListTile(
-              leading: Icon(Icons.list),
-              title: Text('Produtos'),
+              leading: Icon(Icons.balance),
+              title: Text('Custos'),
               onTap: () => _onItemTapped(1),
             ),
             ListTile(
               leading: Icon(Icons.shopping_cart),
-              title: Text('Carrinho'),
+              title: Text('Insumos'),
               onTap: () => _onItemTapped(2),
             ),
             ListTile(
-              leading: Icon(Icons.help),
-              title: Text('Ajuda'),
+              leading: Icon(Icons.monetization_on_rounded),
+              title: Text('Lucro'),
               onTap: () => _onItemTapped(3),
             ),
           ],
