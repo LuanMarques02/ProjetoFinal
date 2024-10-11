@@ -193,7 +193,7 @@ class CartPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Text(
-        'Carrinho de Compras',
+        'Insumos',
         style: TextStyle(fontSize: 24),
       ),
     );
